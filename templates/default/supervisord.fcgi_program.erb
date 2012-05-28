@@ -13,7 +13,7 @@ startretries=<%= @retries %>
 stopsignal=QUIT
 stopwaitsecs=1
 redirect_stderr=true
-stdout_logfile=/var/log/supervisor/<%= @name %>.log
+stdout_logfile=<%= node['supervisord']['childlogdir'] %><%= @name %>.log
 stdout_logfile_maxbytes=10MB
 directory=/tmp
 process_name=%(program_name)s_%(process_num)02d
