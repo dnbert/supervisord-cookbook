@@ -3,11 +3,13 @@ Description
 Supervisord Cookbook installs package, configures and provides a LWRP for supervisor
 
 Attributes
-========== ```ruby
+========== 
+```ruby
 default["supervisord"]["logfile"]               = "/var/log/supervisor/supervisord.log"
 default["supervisord"]["childlogdir"]           = "/var/log/supervisor"
 default["supervisord"]["socket_mode"]           = "0700"
-default["supervisord"]["include_dir"]           = "/etc/supervisor/conf.d/*.conf" ```
+default["supervisord"]["include_dir"]           = "/etc/supervisor/conf.d/*.conf"
+```
 
 Usage
 =====
@@ -15,7 +17,8 @@ Add the cookbook to your run list for your node and it will install to /usr/bin/
 along with a configuration directory of /etc/supervisor/
 
 LWRP
-==== ```ruby
+====
+```ruby
 actions :add_program, :add_fcgi_program
 
 
